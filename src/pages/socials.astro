@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="container links-page">
+    <h1>Minhas redes sociais</h1>
+    <div class="card soundcloud">
+      <img src="/soundcloud.svg" alt="Ícone do SoundCloud" />
+      <a href="https://on.soundcloud.com/5VMKxLNwnRcTXskEXL">SoundCloud</a>
+    </div>
+    <div class="card youtube">
+      <img src="/youtube.svg" alt="Ícone do YouTube" />
+      <a href="https://youtube.com/@youngnisioo?si=NWgPvL1BfH_To2l1">YouTube</a>
+    </div>
+    <div class="card facebook">
+      <img src="/facebook.svg" alt="Ícone do Facebook" />
+      <a href="https://www.facebook.com/share/1EvzYJNKCY/">Facebook</a>
+    </div>
+    <div class="card instagram">
+      <img src="/instagram.svg" alt="Ícone do Instagram" />
+      <a
+        href="https://www.instagram.com/ani_sio_?utm_source=qr&igsh=OTV6NGc4ZTluZW1u"
+        >Instagram</a
+      >
+    </div>
+    <div class="card whatsapp">
+      <img src="/whatsapp.svg" alt="Ícone do WhatsApp" />
+      <a href="https://wa.me/qr/BJ4AAYXZ2TYCB1">Whatsapp</a>
+    </div>
+    <div class="card tiktok">
+      <img src="/tiktok.svg" alt="Ícone do TikTok" />
+      <a href="https://www.tiktok.com/@young_nisioo?_r=1&_t=ZS-943fKuu2vPl"
+        >TikTok</a
+      >
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .links-page {
+    h1 {
+      margin-bottom: 2rem;
+    }
+    div {
+      margin-bottom: 1rem;
+      display: grid;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.75rem;
+      }
+      a {
+        color: white;
+        text-align: left;
+      }
+    }
+
+    .soundcloud {
+      background-color: #f8671e;
+    }
+    .youtube {
+      background-color: #f12929;
+    }
+    .facebook {
+      background-color: #3283ed;
+    }
+    .instagram {
+      background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+      );
+    }
+    .whatsapp {
+      background-color: #25d366;
+    }
+    .tiktok {
+      background-color: #010101;
+    }
+
+    .card:hover {
+      filter: brightness(1.2);
+      transform: scale(1.02);
+    }
+  }
+</style>
