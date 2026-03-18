@@ -42,4 +42,5 @@ body {
   border-radius: 12px;
   padding: 1.25rem 2rem;
   box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
