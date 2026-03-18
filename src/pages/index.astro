@@ -12,95 +12,136 @@ import Layout from '../layouts/Layout.astro';
         <h2>Young Nísioo</h2>
         <span class="badge">Rapper e Compositor</span>
       </div>
+
+      <div class="stats">
+        <div>
+          <p class="number">+59</p>
+          <p class="label">MÚSICAS</p>
+        </div>
+        <div>
+          <p class="number">+6</p>
+          <p class="label">EPS</p>
+        </div>
+        <div>
+          <p class="number">+99</p>
+          <p class="label">OUVINTES MENSAIS</p>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <div class="about">
-        <h1>Sobre o Artista</h1>
-        <p>
-          Bem-vindo ao espaço oficial de música do rapper e compositor Young
-          Nísio, plataforma criada especialmente para aproximar o artista dos
-          seus ouvintes e tornar a sua música acessível a todos.
-        </p>
-        <p>
-          Aqui poderás encontrar e fazer download das músicas mais recentes e
-          dos projectos já lançados, tudo organizado de forma simples, rápida e
-          segura. Cada lançamento é disponibilizado directamente pelo artista,
-          garantindo autenticidade e qualidade.
-        </p>
-        <p>
-          Para além de fazeres download das músicas, esta plataforma permite que
-          conheças as redes sociais do Young Nísio, acompanhes as novidades,
-          fiques por dentro dos próximos lançamentos e estejas sempre conectado
-          à sua jornada artística.
-        </p>
-        <p>
-          Mais do que um site de downloads, este é um ponto de encontro entre o
-          artista e os seus ouvintes.
-        </p>
-        <p>
-          Explora. Faça download. Partilha. E faz parte do movimento Young
-          Nísio.
-        </p>
-      </div>
+    <div class="card about">
+      <h1>Sobre o Artista</h1>
+      <p>
+        Bem-vindo ao espaço oficial de música do rapper e compositor Young
+        Nísio, plataforma criada especialmente para aproximar o artista dos seus
+        ouvintes e tornar a sua música acessível a todos.
+      </p>
+      <p>
+        Aqui poderás encontrar e fazer download das músicas mais recentes e dos
+        projectos já lançados, tudo organizado de forma simples, rápida e
+        segura. Cada lançamento é disponibilizado directamente pelo artista,
+        garantindo autenticidade e qualidade.
+      </p>
+      <p>
+        Para além de fazeres download das músicas, esta plataforma permite que
+        conheças as redes sociais do Young Nísio, acompanhes as novidades,
+        fiques por dentro dos próximos lançamentos e estejas sempre conectado à
+        sua jornada artística.
+      </p>
+      <p>
+        Mais do que um site de downloads, este é um ponto de encontro entre o
+        artista e os seus ouvintes.
+      </p>
+      <p>
+        Explora. Faça download. Partilha. E faz parte do movimento Young Nísio.
+      </p>
     </div>
   </main>
 </Layout>
 
 <style>
-  main {
-    /*margin: 0 auto;*/
-    padding-bottom: 2.25rem;
+  .profile {
+    display: flex;
+    margin-block: 2rem;
+    font-family: 'Amarna', sans-serif;
+    gap: 1.25rem;
+    padding: 2rem 1.5rem;
 
-    .profile {
-      display: flex;
-      margin-block: 2rem;
-      font-family: 'Amarna', sans-serif;
-
-      .profile-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
         overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          overflow: hidden;
-        }
-      }
-      .profile-info {
-        margin-left: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h2 {
-          font-size: 1.5rem;
-          margin-bottom: 0.5rem;
-        }
-        .badge {
-          background: #dbeafe;
-          color: var(--primary-color);
-          padding: 4px 12px;
-          border-radius: 20px;
-          font-size: 0.75rem;
-          font-weight: bold;
-        }
       }
     }
+    .profile-info {
+      /*margin-left: 1.5rem;*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .badge {
+        background: #dbeafe;
+        color: var(--primary-color);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+    }
+  }
 
-    .about {
-      h1 {
+  .stats {
+    font-family: 'Livvic', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    gap: 1rem;
+    margin-left: 0.75rem;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    div {
+      border-radius: 12px;
+      background: #f1f5f9;
+      padding: 1rem;
+      text-align: center;
+
+      .number {
         font-size: 1.25rem;
-        font-family: 'Amarna', sans-serif;
+        font-weight: 500;
+        color: var(--primary-color);
       }
-      p {
-        font-size: 1rem;
+      .label {
+        font-size: 0.75rem;
         color: var(--text-muted);
-        line-height: 1.25rem;
-        margin-top: 0.75rem;
-        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
+    }
+  }
+
+  .about {
+    h1 {
+      font-size: 1.25rem;
+      font-family: 'Amarna', sans-serif;
+    }
+    p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.25rem;
+      margin-top: 0.5rem;
+      /*font-weight: 300;*/
     }
   }
 </style>
