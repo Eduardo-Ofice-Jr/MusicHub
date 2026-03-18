@@ -1,7 +1,15 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+---
+
 <nav>
-  <a href="/">Início</a>
-  <a href="/music">Músicas</a>
-  <a href="/socials">Redes Sociais</a>
+  <a href="/" class={pathname === '/' ? 'active' : ''}>Início</a>
+  <a href="/music" class={pathname.includes('/music') ? 'active' : ''}
+    >Músicas</a
+  >
+  <a href="/socials" class={pathname.includes('/socials') ? 'active' : ''}
+    >Redes Sociais</a
+  >
 </nav>
 
 <style>
@@ -18,7 +26,6 @@
 
   a {
     color: var(--text-muted);
-    text-decoration: none;
   }
 
   a:is(:hover, .active) {
